@@ -553,17 +553,17 @@ PrefabInstance:
     - target: {fileID: 5418844687061243717, guid: 0522c3e3d89334846b985f41b21ba211,
         type: 3}
       propertyPath: m_Name
-      value: artemoo (1)
+      value: end
       objectReference: {fileID: 0}
     - target: {fileID: 5418844687061243736, guid: 0522c3e3d89334846b985f41b21ba211,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.72
+      value: 8.36
       objectReference: {fileID: 0}
     - target: {fileID: 5418844687061243736, guid: 0522c3e3d89334846b985f41b21ba211,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 5418844687061243736, guid: 0522c3e3d89334846b985f41b21ba211,
         type: 3}
@@ -615,6 +615,11 @@ PrefabInstance:
       propertyPath: speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5418844687061243739, guid: 0522c3e3d89334846b985f41b21ba211,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5418844687061243738, guid: 0522c3e3d89334846b985f41b21ba211, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0522c3e3d89334846b985f41b21ba211, type: 3}
@@ -651,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
+  flowchart: {fileID: 0}
 --- !u!212 &405412401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -709,7 +715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405412399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.98, y: -1.66, z: -5.7170053}
+  m_LocalPosition: {x: -8.8, y: -1.5, z: -5.7170053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1012,6 +1018,9 @@ GameObject:
   - component: {fileID: 1190694574}
   - component: {fileID: 1190694576}
   - component: {fileID: 1190694575}
+  - component: {fileID: 1190694578}
+  - component: {fileID: 1190694577}
+  - component: {fileID: 1190694579}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1087,6 +1096,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1190694570}
   commandList:
   - {fileID: 1190694569}
+  - {fileID: 1190694578}
   suppressAllAutoSelections: 0
 --- !u!114 &1190694572
 MonoBehaviour:
@@ -1115,8 +1125,9 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1190694574}
   selectedCommands:
-  - {fileID: 1190694575}
-  variables: []
+  - {fileID: 1190694579}
+  variables:
+  - {fileID: 1190694577}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1143,7 +1154,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1190694574
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1155,8 +1166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 379
-    y: 94
+    x: 268
+    y: 71
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1166,11 +1177,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1190694576}
   commandList:
+  - {fileID: 1190694579}
   - {fileID: 1190694575}
   suppressAllAutoSelections: 0
 --- !u!114 &1190694575
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1197,7 +1209,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1190694576
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1211,6 +1223,149 @@ MonoBehaviour:
   suppressBlockAutoSelect: 0
   tagFilter: []
   FireOn: 1
+--- !u!114 &1190694577
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190694568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705fa1ac97df74e3a84ff952ffd923f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: currentSpeed
+  value: 0
+--- !u!114 &1190694578
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190694568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  variable: {fileID: 1190694577}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 3.5
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1190694579
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190694568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  variable: {fileID: 1190694577}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!1 &1468051661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5418844687061243717, guid: 0522c3e3d89334846b985f41b21ba211,
