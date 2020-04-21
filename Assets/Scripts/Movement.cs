@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class Movement : MonoBehaviour {
     public float speed;
     public float jumpVelocity;
     public float sprintSpeed;
+    public float xMin;
+    public float xMax;
     // Start is called before the first frame update
     void Start() {
         Debug.Log($"start");
