@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour {
     private Collider2D collider;
     public Flowchart flowchart;
     public float speed;
+    public float jumpVelocity;
     // Start is called before the first frame update
     void Start() {
         Debug.Log($"start");
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour {
     void Update()
     {
         speed = flowchart.GetFloatVariable("currentSpeed");
+        jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
         float diff = 0;
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
@@ -32,8 +34,10 @@ public class Movement : MonoBehaviour {
             diff += speed * Time.deltaTime;
         }
 
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            diff += (speed + 3.5F) * Time.deltaTime;
+        }
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
-            float jumpVelocity = 10f;
             rigidBody.velocity = Vector2.up * jumpVelocity;
         }
 
