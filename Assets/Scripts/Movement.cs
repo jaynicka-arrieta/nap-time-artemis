@@ -1,23 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class Movement : MonoBehaviour {
 
     [SerializeField] private LayerMask platformLayerMask;
     private Rigidbody2D rigidBody;
     private Collider2D collider;
-    public float speed = 1;
+    public Flowchart flowchart;
+    public float speed;
+    public float jumpVelocity;
+    public float sprintSpeed;
     // Start is called before the first frame update
     void Start() {
         Debug.Log($"start");
         rigidBody = transform.GetComponent<Rigidbody2D>();
         collider = transform.GetComponent<Collider2D>();
-
+        flowchart = GameObject.FindObjectOfType<Flowchart>();
+        speed = 0;
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
+        speed = flowchart.GetFloatVariable("currentSpeed");
+        jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
+        sprintSpeed = flowchart.GetFloatVariable("sprintSpeed");
         float diff = 0;
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
@@ -27,8 +36,10 @@ public class Movement : MonoBehaviour {
             diff += speed * Time.deltaTime;
         }
 
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            diff += (speed + sprintSpeed) * Time.deltaTime;
+        }
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
-            float jumpVelocity = 10f;
             rigidBody.velocity = Vector2.up * jumpVelocity;
         }
 
