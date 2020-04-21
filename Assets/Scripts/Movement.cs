@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
     public Flowchart flowchart;
     public float speed;
     public float jumpVelocity;
+    public float sprintSpeed;
     // Start is called before the first frame update
     void Start() {
         Debug.Log($"start");
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour {
     {
         speed = flowchart.GetFloatVariable("currentSpeed");
         jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
+        sprintSpeed = flowchart.GetFloatVariable("sprintSpeed");
         float diff = 0;
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
@@ -35,7 +37,7 @@ public class Movement : MonoBehaviour {
         }
 
         if (Input.GetKey(KeyCode.LeftShift)) {
-            diff += (speed + 3.5F) * Time.deltaTime;
+            diff += (speed + sprintSpeed) * Time.deltaTime;
         }
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
             rigidBody.velocity = Vector2.up * jumpVelocity;
