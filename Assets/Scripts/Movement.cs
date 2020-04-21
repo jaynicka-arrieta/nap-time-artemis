@@ -48,6 +48,24 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
+
+        if (Input.GetKey(KeyCode.S)) {
+            string activeScene = SceneManager.GetActiveScene().name;
+            if (activeScene == "level1") {
+                SceneManager.LoadScene("level3");
+            }
+            
+        }
+    }
+
+    void LateUpdate() {
+        if (transform.position.x < xMin) {
+            transform.position = new Vector3(xMin, transform.position.y);
+        }
+
+        if (transform.position.x > xMax) {
+            transform.position = new Vector3(xMax, transform.position.y);
+        }
     }
 
     private bool IsGrounded() {
