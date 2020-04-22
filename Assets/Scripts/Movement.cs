@@ -39,9 +39,6 @@ public class Movement : MonoBehaviour {
             diff += speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            diff += (speed + sprintSpeed) * Time.deltaTime;
-        }
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
             rigidBody.velocity = Vector2.up * jumpVelocity;
         }
