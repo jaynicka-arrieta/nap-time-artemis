@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 2e33536e6947d8f41966c4218abe1308
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2112253908681733872
+    second: Artemis Walk_0
+  - first:
+      213: -8519412405060997467
+    second: Artemis Walk_1
+  - first:
+      213: -5366494107191046403
+    second: Artemis Walk_2
+  - first:
+      213: 9122247197598410326
+    second: Artemis Walk_3
+  - first:
+      213: -2078652145957824954
+    second: Artemis Walk_4
+  - first:
+      213: -1346923464353279002
+    second: Artemis Walk_5
+  - first:
+      213: -3814228394480052809
+    second: Artemis Walk_6
+  - first:
+      213: -8757377812793892690
+    second: Artemis Walk_7
+  - first:
+      213: -7261889196501303993
+    second: Artemis Walk_8
+  - first:
+      213: -3260169459980799084
+    second: Artemis Walk_9
+  - first:
+      213: 2920664038340305205
+    second: Artemis Walk_10
+  - first:
+      213: 7884559774441361180
+    second: Artemis Walk_11
+  - first:
+      213: -5751280137174957344
+    second: Artemis Walk_12
+  - first:
+      213: -5622669288571416781
+    second: Artemis Walk_13
+  - first:
+      213: -2400056893284619462
+    second: Artemis Walk_0
+  - first:
+      213: 8479221741379434556
+    second: Artemis Walk_1
+  - first:
+      213: -1668812800245305134
+    second: Artemis Walk_2
+  - first:
+      213: 7866934389252193020
+    second: Artemis Walk_3
+  - first:
+      213: -8448746100011131803
+    second: Artemis Walk_4
+  - first:
+      213: 6354231704224343940
+    second: Artemis Walk_5
+  - first:
+      213: 5795009315155548626
+    second: Artemis Walk_6
+  - first:
+      213: -5544714381759672405
+    second: Artemis Walk_7
+  - first:
+      213: 3249399827994401486
+    second: Artemis Walk_8
+  - first:
+      213: 4829400410610769680
+    second: Artemis Walk_9
+  - first:
+      213: -5708791173805687518
+    second: Artemis Walk_10
+  - first:
+      213: 730970677574440983
+    second: Artemis Walk_11
+  - first:
+      213: -8058738054756075299
+    second: Artemis Walk_12
+  - first:
+      213: -1438212933568132324
+    second: Artemis Walk_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 416, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Artemis Walk_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bea0bb8f841bed0800000000000000
+      internalID: -2400056893284619462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38b0babf3f3ca570800000000000000
+      internalID: 8479221741379434556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0f0c4999f27d8e0800000000000000
+      internalID: -1668812800245305134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa7eae6527fc2d60800000000000000
+      internalID: 7866934389252193020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c9e577f2600ca80800000000000000
+      internalID: -8448746100011131803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48721de9114ce2850800000000000000
+      internalID: 6354231704224343940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d91de3d4420c6050800000000000000
+      internalID: 5795009315155548626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf073e95a73d03b0800000000000000
+      internalID: -5544714381759672405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca52d07def281d20800000000000000
+      internalID: 3249399827994401486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f9490161a750340800000000000000
+      internalID: 4829400410610769680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_10
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d3d648cac46c0b0800000000000000
+      internalID: -5708791173805687518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_11
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7181d0a55fde42a00800000000000000
+      internalID: 730970677574440983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_12
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8775caf6c992090800000000000000
+      internalID: -8058738054756075299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artemis Walk_13
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 3
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b8c47f4f07a0ce0800000000000000
+      internalID: -1438212933568132324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
