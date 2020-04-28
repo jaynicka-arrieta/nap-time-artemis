@@ -35703,7 +35703,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sprint
+  m_Text: 'Sprint
+
+
+    Press ESC to quit'
 --- !u!222 &1505563507
 CanvasRenderer:
   m_ObjectHideFlags: 0
