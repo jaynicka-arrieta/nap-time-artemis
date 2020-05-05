@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 405412406}
   - component: {fileID: 405412403}
   - component: {fileID: 405412405}
+  - component: {fileID: 405412407}
   m_Layer: 0
   m_Name: artemoo
   m_TagString: Player
@@ -433,6 +434,8 @@ MonoBehaviour:
   sprintSpeed: 0
   xMin: -41
   xMax: 31
+  animator: {fileID: 405412407}
+  facingRight: 0
 --- !u!212 &405412401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -469,15 +472,16 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2144591301
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2acb556981f73e14680b42ae742f93cf, type: 3}
+  m_Sprite: {fileID: -2112253908681733872, guid: 2e33536e6947d8f41966c4218abe1308,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.28}
+  m_Size: {x: 0.875, y: 0.84375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -491,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405412399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.39, y: -4.57, z: 0}
+  m_LocalPosition: {x: -40.736, y: -6.009, z: 0}
   m_LocalScale: {x: 0.60552865, y: 0.60552865, z: 0.60552865}
   m_Children: []
   m_Father: {fileID: 0}
@@ -546,7 +550,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000017718131, y: 0.07613639}
   serializedVersion: 2
-  m_Radius: 0.7451677
+  m_Radius: 0.63
 --- !u!114 &405412406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +563,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935b5905125fe2d4bb91a546f09711b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &405412407
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405412399}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2cb53d1b15c4b140a0fb7e6bc6d75bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &504450048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,6 +2937,7 @@ GameObject:
   - component: {fileID: 1662551985}
   - component: {fileID: 1662551984}
   - component: {fileID: 1662551988}
+  - component: {fileID: 1662551989}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -4019,6 +4043,7 @@ MonoBehaviour:
   - {fileID: 1662551983}
   - {fileID: 1662551975}
   - {fileID: 1662551969}
+  - {fileID: 1662551989}
   suppressAllAutoSelections: 0
 --- !u!114 &1662551979
 MonoBehaviour:
@@ -4047,7 +4072,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1662551978}
   selectedCommands:
-  - {fileID: 1662551988}
+  - {fileID: 1662551989}
   variables:
   - {fileID: 1662551974}
   - {fileID: 1662551970}
@@ -4272,7 +4297,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1662551984
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4286,7 +4311,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &1662551985
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4304,7 +4329,7 @@ MonoBehaviour:
     stringVal: Sprint
 --- !u!114 &1662551986
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4368,7 +4393,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1662551987
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4432,7 +4457,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1662551988
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4494,6 +4519,32 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1662551989
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662551948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5316d953c7abe498799575550c973535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 55
+  indentLevel: 0
+  animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 405412407}
+  stateName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  layer:
+    integerRef: {fileID: 0}
+    integerVal: -1
+  time:
+    floatRef: {fileID: 0}
+    floatVal: 0
 --- !u!1 &1753667491
 GameObject:
   m_ObjectHideFlags: 0
