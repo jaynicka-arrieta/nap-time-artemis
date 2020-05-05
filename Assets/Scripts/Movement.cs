@@ -48,6 +48,17 @@ public class Movement : MonoBehaviour {
             rigidBody.velocity = Vector2.up * jumpVelocity;
         }
 
+        // There has to be a prettier way to check for jumping but I don't know it
+        if (IsGrounded() == true)
+        {
+            animator.SetBool("isJumping", false);
+        }
+
+        else
+        {
+            animator.SetBool("isJumping", true);
+        }
+
         transform.Translate(new Vector3(diff, 0, 0));
         animator.SetFloat("Speed", Mathf.Abs(diff));
         if (diff > 0 && !facingRight) {
