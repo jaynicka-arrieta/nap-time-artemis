@@ -28,13 +28,8 @@ public class Movement : MonoBehaviour {
         facing = "right";
     }
 
-    // Update is called once per frame
-    void Update()
-    { 
-        speed = flowchart.GetFloatVariable("currentSpeed");
-        jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
-        sprintSpeed = flowchart.GetFloatVariable("sprintSpeed");
-        float diff = 0;
+    void FixedUpdate() {
+                float diff = 0;
 
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
@@ -43,6 +38,29 @@ public class Movement : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow)) {
             diff += speed * Time.deltaTime;
         }
+
+        
+        transform.Translate(new Vector3(diff, 0, 0));
+        animator.SetFloat("Speed", Mathf.Abs(diff));
+        if (diff > 0 && !facingRight) {
+            Flip();
+        } else if (diff < 0 && facingRight) {
+            Flip();
+        }
+
+        if (diff == 0) {
+            animator.SetBool("isStanding", true);
+        } else {
+            animator.SetBool("isStanding", false);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    { 
+        speed = flowchart.GetFloatVariable("currentSpeed");
+        jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
+        sprintSpeed = flowchart.GetFloatVariable("sprintSpeed");
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
             rigidBody.velocity = Vector2.up * jumpVelocity;
@@ -59,19 +77,6 @@ public class Movement : MonoBehaviour {
             animator.SetBool("isJumping", true);
         }
 
-        transform.Translate(new Vector3(diff, 0, 0));
-        animator.SetFloat("Speed", Mathf.Abs(diff));
-        if (diff > 0 && !facingRight) {
-            Flip();
-        } else if (diff < 0 && facingRight) {
-            Flip();
-        }
-
-        if (diff == 0) {
-            animator.SetBool("isStanding", true);
-        } else {
-            animator.SetBool("isStanding", false);
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
