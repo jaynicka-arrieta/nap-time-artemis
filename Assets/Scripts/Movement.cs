@@ -9,12 +9,15 @@ public class Movement : MonoBehaviour {
     [SerializeField] private LayerMask platformLayerMask;
     private Rigidbody2D rigidBody;
     private Collider2D collider;
+    private string facing;
     public Flowchart flowchart;
     public float speed;
     public float jumpVelocity;
     public float sprintSpeed;
     public float xMin;
     public float xMax;
+    public Animator animator;
+    public bool facingRight;
     // Start is called before the first frame update
     void Start() {
         Debug.Log($"start");
@@ -22,15 +25,17 @@ public class Movement : MonoBehaviour {
         collider = transform.GetComponent<Collider2D>();
         flowchart = GameObject.FindObjectOfType<Flowchart>();
         speed = 0;
+        facing = "right";
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         speed = flowchart.GetFloatVariable("currentSpeed");
         jumpVelocity = flowchart.GetFloatVariable("jumpSpeed");
         sprintSpeed = flowchart.GetFloatVariable("sprintSpeed");
         float diff = 0;
+
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
         }
@@ -44,6 +49,18 @@ public class Movement : MonoBehaviour {
         }
 
         transform.Translate(new Vector3(diff, 0, 0));
+        animator.SetFloat("Speed", Mathf.Abs(diff));
+        if (diff > 0 && !facingRight) {
+            Flip();
+        } else if (diff < 0 && facingRight) {
+            Flip();
+        }
+
+        if (diff == 0) {
+            animator.SetBool("isStanding", true);
+        } else {
+            animator.SetBool("isStanding", false);
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
@@ -56,6 +73,13 @@ public class Movement : MonoBehaviour {
             }
             
         }
+    }
+
+    void Flip(){
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     void LateUpdate() {
