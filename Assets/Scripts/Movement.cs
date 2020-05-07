@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-                float diff = 0;
+        float diff = 0;
 
         if (Input.GetKey(KeyCode.LeftArrow)) {
             diff -= speed * Time.deltaTime;
