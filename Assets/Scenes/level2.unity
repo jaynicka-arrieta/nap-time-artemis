@@ -10070,7 +10070,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 85bdf7cb3a03853469de64116e9f9cfa, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10329,9 +10329,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1728606552}
-  selectedCommands:
-  - {fileID: 1728606557}
+  - {fileID: 1728606550}
+  selectedCommands: []
   variables:
   - {fileID: 1728606548}
   - {fileID: 1728606545}
@@ -10529,7 +10528,6 @@ GameObject:
   - component: {fileID: 1967819598}
   - component: {fileID: 1967819597}
   - component: {fileID: 1967819596}
-  - component: {fileID: 1967819594}
   - component: {fileID: 1967819593}
   - component: {fileID: 1967819592}
   - component: {fileID: 1967819591}
@@ -10606,18 +10604,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1967819594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967819590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 935b5905125fe2d4bb91a546f09711b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1967819596
 MonoBehaviour:
   m_ObjectHideFlags: 0
