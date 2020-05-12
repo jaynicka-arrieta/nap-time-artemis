@@ -5,8 +5,7 @@ using Fungus;
 
 public class Death : MonoBehaviour
 {
- public Flowchart flowchart;
-
+    public Flowchart flowchart;
      void Start() {
         flowchart = GameObject.FindObjectOfType<Flowchart>();
     }

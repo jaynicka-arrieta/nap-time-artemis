@@ -176,7 +176,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11742659, y: 0.24638149}
@@ -407,10 +407,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 383864465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c526ff946de4f44b12aa3e6030c92a, type: 3}
+  m_Script: {fileID: 11500000, guid: cbdcb78257b7ed04bbed6717ff96a193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowchart: {fileID: 1662551979}
 --- !u!61 &383864467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -445,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383864465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: -9.81, z: -16.30664}
+  m_LocalPosition: {x: -3.1, y: -10.04, z: -16.30664}
   m_LocalScale: {x: 96, y: 1.6265669, z: 1.6265669}
   m_Children: []
   m_Father: {fileID: 0}
@@ -555,7 +554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405412399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.06, y: -5.88, z: 0}
+  m_LocalPosition: {x: -40.78, y: -5.88, z: 0}
   m_LocalScale: {x: 0.60552865, y: 0.60552865, z: 0.60552865}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2889,7 +2888,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!114 &1066425992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3074,7 +3073,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!114 &1081213087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,7 +3294,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11742659, y: 0.24638149}
@@ -3366,7 +3365,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11742659, y: 0.24638149}
@@ -3534,7 +3533,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!114 &1408236817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3667,7 +3666,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!114 &1508327772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3931,7 +3930,6 @@ GameObject:
   - component: {fileID: 1662551976}
   - component: {fileID: 1662551975}
   - component: {fileID: 1662551974}
-  - component: {fileID: 1662551973}
   - component: {fileID: 1662551972}
   - component: {fileID: 1662551971}
   - component: {fileID: 1662551970}
@@ -3975,6 +3973,10 @@ GameObject:
   - component: {fileID: 1662552001}
   - component: {fileID: 1662551995}
   - component: {fileID: 1662551994}
+  - component: {fileID: 1662551992}
+  - component: {fileID: 1662551973}
+  - component: {fileID: 1662552002}
+  - component: {fileID: 1662551993}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -4207,8 +4209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 589.8745
-    y: 68.79542
+    x: 590.93835
+    y: 70.92307
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4899,7 +4901,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1662551973
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4909,9 +4911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
+  itemId: 70
   indentLevel: 0
-  storyText: start
+  storyText: 'Aliquam feugiat  in quam eget viverra. Maecenas eget erat consectetur,
+    condimentum arcu sit amet, lacinia dui. Cras sed commodo nibh. Morbi sit amet
+    egestas lorem. Maecenas nec finibus ligula. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -5077,7 +5081,10 @@ MonoBehaviour:
   eventHandler: {fileID: 1662551977}
   commandList:
   - {fileID: 1662551988}
+  - {fileID: 1662551992}
   - {fileID: 1662551973}
+  - {fileID: 1662552002}
+  - {fileID: 1662551993}
   - {fileID: 1662551994}
   - {fileID: 1662551983}
   - {fileID: 1662551975}
@@ -5097,10 +5104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 215.44417, y: -12.41244}
+  scrollPos: {x: 660.1248, y: 10.991814}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 628
+  blockViewHeight: 631
   zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
@@ -5109,8 +5116,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1662551990}
-  selectedCommands: []
+  - {fileID: 1662551978}
+  selectedCommands:
+  - {fileID: 1662551993}
   variables:
   - {fileID: 1662551974}
   - {fileID: 1662551970}
@@ -5598,8 +5606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -94.16766
-    y: 69.859245
+    x: -98.422966
+    y: 68.79544
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5631,6 +5639,63 @@ MonoBehaviour:
   itemId: 57
   indentLevel: 0
   storyText: dead
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1662551992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662551948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 69
+  indentLevel: 0
+  storyText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur
+    ornare pretium. Nam ultrices quis ligula lacinia scelerisque. Nunc laoreet sapien
+    ipsum, ut cursus eros pretium eu.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1662551993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662551948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 72
+  indentLevel: 0
+  storyText: Quisque sollicitudin ultricies est at commodo. Ut porttitor feugiat
+    nibh ut tincidunt.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -6061,6 +6126,35 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1662552002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662551948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  storyText: 'Etiam tincidunt eget nisl at feugiat. Fusce eget mauris enim. Maecenas
+    quis tristique diam. Donec consequat justo a lectus rhoncus molestie ac quis
+    ligula. '
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1753667491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,7 +6278,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.11742659, y: 0.24638149}

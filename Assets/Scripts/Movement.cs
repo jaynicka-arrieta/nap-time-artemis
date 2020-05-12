@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] private LayerMask platformLayerMask;
     private Rigidbody2D rigidBody;
     private Collider2D collider;
-    private string facing;
+    private bool jumped;
     public Flowchart flowchart;
     public float speed;
     public float jumpVelocity;
@@ -20,12 +20,13 @@ public class Movement : MonoBehaviour {
     public bool facingRight;
     // Start is called before the first frame update
     void Start() {
+        Flip();
         Debug.Log($"start");
         rigidBody = transform.GetComponent<Rigidbody2D>();
         collider = transform.GetComponent<Collider2D>();
         flowchart = GameObject.FindObjectOfType<Flowchart>();
         speed = 0;
-        facing = "right";
+        jumped = false;
     }
 
     void FixedUpdate() {
@@ -42,9 +43,9 @@ public class Movement : MonoBehaviour {
         
         transform.Translate(new Vector3(diff, 0, 0));
         animator.SetFloat("Speed", Mathf.Abs(diff));
-        if (diff > 0 && !facingRight) {
+        if (diff > 0 && !facingRight && IsGrounded()) {
             Flip();
-        } else if (diff < 0 && facingRight) {
+        } else if (diff < 0 && facingRight && IsGrounded()) {
             Flip();
         }
 
@@ -70,28 +71,24 @@ public class Movement : MonoBehaviour {
         if (IsGrounded() == true)
         {
             animator.SetBool("isJumping", false);
-        }
-
-        else
-        {
+            if (jumped == true) {
+                Flip();
+            }
+            jumped = false;
+        } else {
             animator.SetBool("isJumping", true);
+            if (jumped == false) {
+                Flip();
+                jumped = true;
+            }
         }
-
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
-
-        if (Input.GetKey(KeyCode.S)) {
-            string activeScene = SceneManager.GetActiveScene().name;
-            if (activeScene == "level1") {
-                SceneManager.LoadScene("level3");
-            }
-            
-        }
     }
 
-    void Flip(){
+    void Flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
